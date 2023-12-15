@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Website</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <script>
+      function add_item(){
+        btn=document.getElementById("add_item");
+        color=btn.style.color;
+        if(color == "gray"){
+          btn.style.color="red";
+        }
+          else {
+            btn.style.color="gray";
+          }
+        }
+    
+    </script>
+
+</head>
+<body>
+
+  <div class="width-100 search-panel">
+    <div class="container">
+      <div class="width-20">
+        <img src="./click-to-buy-high-resolution-logo.png" class="logo">
+      </div>
+      <div class="width-50">
+        <input class="search-textbox" type="text" placeholder="Search for products, brand and more">
+        <button class="search-button">
+          <a href="#"><img src="./magnifying-glass-solid.svg" alt="" style="height: 20px;"></a>
+        </button>
+      </div>
+      <div class="width-30">
+        <ul class="cart-sect">
+          <li>
+            <a class="head1mr" href="wishlist.html">🤍 Wishlist</a>
+          </li>
+          <li>
+            <a href="./account.html">👥 Login & Signup</a>
+          </li>
+          <li>
+          <a id="cart-icon">🛒 Cart (0)</a>
+          </li>
+        </ul>
+        
+      </div>
+
+      
+
+    </div>
+    <div class="cart">
+      <h2 class="cart-title">Your Cart</h2>
+
+      <!-- CONTENT  -->
+      <div class="cart-content">
+
+
+      </div>
+
+      <!-- TOTAL   -->
+      <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+      </div>
+      <!-- BUY BUTTON  -->
+      <button type="button" class="btn-buy">Buy Now</button>
+      <!-- CART CLOSE  -->
+      <i class="fa-solid fa-xmark" id="cart-close"></i>
+  </div>
+  </div>
+
+  
+<div class="width-100">
+  <div class="container navbar">
+    <ul class="main-menu">
+      <li class="home">
+        <a href="./index.html"><img src="./house-solid.svg" style="height: 15px;" alt=""> Home</a>
+      </li>
+      <li>
+        <a href="./mobile.html"><img src="./mobile-screen-button-solid.svg" alt="" style="height: 15px;"> Mobile</a>
+      </li>
+      <li>
+        <a href="./accessories.html"><img src="./headphones-simple-solid.svg" alt="" style="height: 15px;"> Accessories</a>
+      </li>
+      <li>
+        <a href="./fashion.html"><img src="./shirt-solid.svg" alt="" style="height: 15px;"> Fashion</a>
+      </li>
+      <li>
+        <a href="./electronics.html"><img src="./bolt-solid.svg" alt="" style="height: 15px;"> Electronics</a>
+      </li>
+      <li>
+        <a href="./appliances.html"><img src="./lightbulb-solid.svg" alt="" style="height: 15px;"> Appliances</a>
+      </li>
+      <li>
+        <a href="#"><img src="./gift-solid.svg" alt="" style="height: 15px;"> Top Offers</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Slider start -->
+  <div class="w3-content w3-section" style="max-width: 1350px;">
+    <img class="mySlides" src="./slide4.png" style="width: 100%;">
+    <img class="mySlides" src="./slide5.jpg" style="width: 100%;">
+    <img class="mySlides" src="./slider3.jpg" style="width: 100%;">
+    
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+    function carousel(){
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for(i=0;i<x.length;i++){
+        x[i].style.display="none";
+      }
+       myIndex++;
+      if(myIndex>x.length) {myIndex=i}
+      x[myIndex-1].style.display="block";
+      setTimeout(carousel,3000);
+    }
+  </script>
+  <!-- Slider End -->
+
+  <div class="row">
+    
+    <select name="" id="">
+      <option value="">Dafault Sorting</option>
+      <option value="">Sort by Price</option>
+      <option value="">Sort by Rating</option>
+      <option value="">Sort by Popularity</option>
+      <option value="">Sort by Sale</option>
+    </select>
+    <h2 class="product">All Products</h2>
+  </div>
+
+  <!-- Product-Section HTML Code STARTS -->
+<div class="width-100 margin-top-50">
+  <div class="container">
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish" onclick="wishlist()">
+            <i class="fa-solid fa-heart add" id="add_item" onclick="add_item()"></i>
+          </div>
+          
+          <div class="product-img-center">
+            <a href="./product1.html">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="./product1.html">New iphone 13 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+
+            </div>
+            
+              
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.77,000.00</span>
+              <span class="product-original-price">Rs.89,900</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add" id="add_item1"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name product-title">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price product-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+              <!-- <span class="add-cart"><i class="fa-solid fa-cart-shopping"></i></span> -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="wish">
+            <i class="fa-solid fa-heart add"></i>
+          </div>
+          <div class="product-img-center">
+            <a href="#">
+              <img class="product-img" src="phone.avif">
+            </a>
+          </div>
+          <div>
+            <p class="product-name">
+              <a href="#">New iphone 11 Max Pro 64 GB</a>
+            </p>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div>
+          <!-- <div class="product-box">
+            <img src="phone.avif" alt="" class="product-img">
+            <h2 class="product-title">BACKPACK</h2>
+            <span class="product-price">$59.5</span>
+            <i class='bx bx-shopping-bag add-cart'></i>
+            <div class="wish">
+              <i class="fa-solid fa-heart add"></i>
+            </div>
+            <div class="product-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.549.00</span>
+              <span class="product-original-price">Rs.554</span>
+              <span class="product-discount">90%OFF</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- <div class="container">
+<div class="product-box">
+  <img src="phone.avif" alt="" class="product-img">
+  <h2 class="product-title">BACKPACK</h2>
+  <span class="product-price">$59.5</span>
+  <i class='bx bx-shopping-bag add-cart'></i>
+  <div class="wish">
+    <i class="fa-solid fa-heart add"></i>
+  </div>
+  <div class="product-rating">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+  </div>
+  <p class="product-price">
+    <span class="product-discounted-price">Rs.549.00</span>
+    <span class="product-original-price">Rs.554</span>
+    <span class="product-discount">90%OFF</span>
+</div>
+</div> -->
+
+<div class="page-btn">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>&#8594;</span>
+</div>
+
+<footer class="footer">
+  <div class="follow">
+    <h2>----------Follow us on----------</h2><br><br>
+    <a href="#" class="flogo"><img src="./fb.svg" alt="facebook"></a>
+    <a href="#" class="flogo"><img src="./instagram.svg" alt="facebook"></a>
+    <a href="#" class="flogo"><img src="./linkedin.svg" alt="facebook"></a>
+    <a href="#" class="flogo"><img src="./twitter.svg" alt="facebook"></a>
+    <a href="#" class="flogo"><img src="./youtube.svg" alt="facebook"></a>
+    
+  </div><br><br>
+  <div class="sub-footer">
+  <div class="content content1">
+    <h2><u>Contact</u></h2>
+    <p class="footer-data"><br>Contact:1234678812 <br><br>E-mail:baghelsatendra27@gmail.com</p>
+  </div>
+  <div class="content content2">
+    <h2><u>Company</u></h2>
+    <p class="footer-data"><br>Customer support link <br>
+      FAQ page link <br><br>
+      Return and exchange policy <br> <br>
+      Terms and conditions <br><br>
+      Privacy policy</p>
+  </div>
+  <div class="content content2">
+    <h2><u>Support</u></h2>
+    <p><br>Product categories <br> <br>
+      Popular products <br><br>
+      New arrivals <br><br>
+      Sale items <br><br>
+      Gift cards</p>
+  </div>
+  <div class="content content2">
+    <h2><u>About</u></h2>
+    <p><br>Leadership <br><br>Customers <br><br>Shipping information
+      <br><br>Returns and exchanges information
+      <br><br>Estimated delivery times</p>
+  </div>
+  </div>
+  
+</footer>
+<div class="copyright">
+  <h2>
+    Copyright © 2027 - All rights reserved</h2>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
